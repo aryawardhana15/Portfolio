@@ -13,10 +13,10 @@
   {
     "name": "TanyaKakak website",
     "desc": "Tanya Kakak is an innovative web platform that connects students and young professionals with mentors, empowering them to develop skills, create sustainable ideas, and compete in SDG-aligned events.",
-    "image": "../assets/images/projects/TanyaKakak.png",
+    "image": "../assets/images/projects/tanyakakakproject.png",
     "category": "website",
     "links": {
-        "view": "http://example.com",
+        "view": "https://tanyakakakwebsite.vercel.app/",
         "code": "http://github.com"
     }
   },
@@ -31,3 +31,4 @@
     }
   }
 ]
+

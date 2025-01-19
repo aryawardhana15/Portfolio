@@ -166,30 +166,46 @@ var typed = new Typed(".typing-text", {
 // }
 
 function showProjects(projects) {
+  console.log("Original projects array:", projects); // Menampilkan array asli proyek
+
   let projectsContainer = document.querySelector("#work .box-container");
+  console.log("Projects container element:", projectsContainer); // Menampilkan elemen container yang dipilih
+
   let projectHTML = "";
+
   projects
-    .slice(0, 10)
-    .filter((project) => project.category != "android")
-    .forEach((project) => {
+    .slice(0, 10) // Membatasi hanya 10 proyek pertama
+    .filter((project) => {
+      const isNotAndroid = project.category != "android";
+      console.log(`Filtering project "${project.name}": ${isNotAndroid ? "Included" : "Excluded"}`); // Menampilkan proyek yang lolos filter
+      return isNotAndroid;
+    })
+    .forEach((project, index) => {
+      console.log(`Processing project ${index + 1}:`, project); // Menampilkan data proyek yang sedang diproses
       projectHTML += `
         <div class="box tilt">
-      <img draggable="false" src="${project.image}" alt="project" />
-      <div class="content">
-        <div class="tag">
-        <h3>${project.name}</h3>
-        </div>
-        <div class="desc">
-          <p>${project.desc}</p>
-          <div class="btns">
-            <a href="${project.links.view}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="${project.links.code}" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+          <img draggable="false" src="${project.image}" alt="project" />
+          <div class="content">
+            <div class="tag">
+              <h3>${project.name}</h3>
+            </div>
+            <div class="desc">
+              <p>${project.desc}</p>
+              <div class="btns">
+                <a href="${project.links.view}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
+                <a href="${project.links.code}" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>`;
+        </div>`;
     });
+
+  console.log("Generated project HTML:", projectHTML); // Menampilkan HTML yang dihasilkan
+
   projectsContainer.innerHTML = projectHTML;
+  console.log("Projects rendered successfully in the container!"); // Konfirmasi proses selesai
+}
+
 
   // <!-- tilt js effect starts -->
   VanillaTilt.init(document.querySelectorAll(".tilt"), {
