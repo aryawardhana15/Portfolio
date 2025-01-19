@@ -40,6 +40,7 @@
       
 </head>
 <body oncontextmenu="return false">
+ 
 
 <!-- pre loader -->
 <!-- <div class="loader-container">
@@ -139,7 +140,7 @@
 <!-- about section ends -->
 
 <!-- skills section starts -->
-<h2 class="skills-title" data-aos="fade-up" data-aos-anchor-placement="top-bottom">My Skills</h2>
+<h2 class="skills-title" data-aos="fade-up" data-aos-anchor-placement="top-bottom" id="skills">My Skills</h2>
 <p class="skills-subtitle"  data-aos="fade-up" data-aos-anchor-placement="top-bottom">
   I am committed to continuous learning and self-improvement, embracing challenges as opportunities to grow. As a fast learner with a passion for both my career and studies, I strive for excellence in every task I undertake. My perfectionist nature drives me to deliver work that is not only functional but also aesthetically pleasing. With a solid foundation and experience in various technical and creative skills, I am dedicated to achieving impactful results and adapting to evolving demands.
 </p>
@@ -404,19 +405,19 @@
       
       <div class="form-group">
         <div class="field">
-          <input type="text" name="name" placeholder="Name" required>
+          <input type="text" id="name" name="name" placeholder="Name" required>
           <i class='fas fa-user'></i>
         </div>
         <div class="field">
-          <input type="text" name="email" placeholder="Email" required>
+          <input type="text" id="email" name="email" placeholder="Email" required>
           <i class='fas fa-envelope'></i>
         </div>
         <div class="field">
-          <input type="text" name="phone" placeholder="Phone">
+          <input type="text" id="phone" name="phone" placeholder="Phone">
           <i class='fas fa-phone-alt'></i>
         </div>
         <div class="message">
-        <textarea placeholder="Message" name="message" required></textarea>
+        <textarea placeholder="Message" id="message" name="message" required></textarea>
         <i class="fas fa-comment-dots"></i>
         </div>
         </div>
@@ -428,6 +429,8 @@
   </div>
   </div>
 </section>
+<script type="module" src="./config.js"></script>
+
 <!-- contact section ends -->
 
 
@@ -481,7 +484,7 @@
 
 <!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
 <!-- jquery cdn -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script<>
 
 <!-- typed.js cdn -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -504,7 +507,8 @@
 <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
 
 <script src="./assets/js/script.js"></script>
-
+<script src="./config.js"></script>
+<script src="./env.js"></script>
 <script>
   AOS.init();
 </script>
